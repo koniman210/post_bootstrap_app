@@ -13,16 +13,38 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
-$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/regular";
 @import "@fortawesome/fontawesome-free/scss/solid";
 @import "@fortawesome/fontawesome-free/scss/brands";
- div.field_with_errors {
-   display: contents;
-    input{
-      border: 2px solid red;
-    }
- }
+div.field_with_errors {
+  display: contents;
+  input,
+  textarea {
+    @extend .is-invalid;
+    border: 2px solid red;
+  }
+}
+.base-container {
+  @extend .container-fluid;
+  max-width: var(--breakpoint-lg);
+  padding: 30px 15px;
+}
+body {
+  padding-top: 56px;
+}
+th,
+td {
+  vertical-align: middle !important;
+}
+.alert-notice {
+  padding-top: 40px;
+  @extend .alert-success;
+}
+.alert-alert {
+  padding-top: 40px;
+  @extend .alert-danger;
+}
