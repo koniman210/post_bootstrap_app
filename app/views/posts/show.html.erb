@@ -6,4 +6,9 @@
   <div class = "card-body">
     <p class= "card-text"><%= simple_format(h @post.content) %></p>
   </div>
+  <div class = "card-body">
+  <% if @post.image_url %>
+    <%= image_tag @post.image_url(:thumb) %>
+  <% end %>
+  </div>
 </section>

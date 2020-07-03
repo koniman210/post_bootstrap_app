@@ -10,6 +10,10 @@
     <%= form.text_area :content ,class: "form-control" ,rows: 10 ,required: true, maxlength: 500 %>
   </div>
   <div>
+  <%= form.label :image%>
+  <%= form.file_field :image %>
+  </div>
+  <div>
     <%=form.submit button_value, class:"btn btn-primary btn-block" %>
   </div>
 <% end %>
